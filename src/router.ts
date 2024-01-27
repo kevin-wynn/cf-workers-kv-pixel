@@ -15,9 +15,9 @@ router.get('/analytics', async (_request, env: Env) => {
 		.map((entry) => {
 			if (entry.value) {
 				const json = JSON.parse(entry.value);
-				return `<tr><td>${json.id}</td><td>${new Date(json.time).toLocaleTimeString()}</td><td>${json.country}</td><td>${
-					json.city
-				}</td><td>${json.regionCode}</td><td>${json.postalCode}</td><td>${json.timezone}</td><td>${json.colo}</td></tr>`;
+				return `<tr><td>${json.id}</td><td>${new Date(json.time).toLocaleString()}</td><td>${json.country}</td><td>${json.city}</td><td>${
+					json.regionCode
+				}</td><td>${json.postalCode}</td><td>${json.timezone}</td><td>${json.colo}</td></tr>`;
 			}
 		})
 		.toString()
